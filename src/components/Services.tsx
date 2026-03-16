@@ -37,17 +37,17 @@ export default function Services() {
   ];
 
   return (
-    <section className="py-32 bg-stone-950 text-white">
+    <section className="py-16 md:py-32 bg-stone-950 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-emerald-400 font-semibold tracking-widest uppercase text-sm mb-4">Expertise</h2>
-          <h3 className="text-4xl md:text-6xl font-display font-bold mb-6">Comprehensive Care</h3>
-          <p className="text-lg text-stone-400 font-light">
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-20">
+          <h2 className="text-emerald-400 font-semibold tracking-widest uppercase text-xs md:text-sm mb-3 md:mb-4">Expertise</h2>
+          <h3 className="text-3xl sm:text-4xl md:text-6xl font-display font-bold mb-4 md:mb-6">Comprehensive Care</h3>
+          <p className="text-base md:text-lg text-stone-400 font-light">
             From routine maintenance to complete transformations, we have the skills to handle it all.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {serviceCategories.map((category, index) => (
             <motion.div
               key={index}
@@ -55,7 +55,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group relative h-[450px] rounded-[2rem] overflow-hidden cursor-pointer"
+              className="group relative h-[380px] md:h-[450px] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden cursor-pointer"
             >
               <img
                 src={category.image}
@@ -88,13 +88,13 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="group relative h-[450px] rounded-[2rem] overflow-hidden bg-emerald-900 flex flex-col items-center justify-center text-center p-8 border border-emerald-800"
+            className="group relative h-[380px] md:h-[450px] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden bg-emerald-900 flex flex-col items-center justify-center text-center p-6 md:p-8 border border-emerald-800"
           >
-            <h4 className="text-3xl font-display font-bold mb-4 text-white">Need something else?</h4>
-            <p className="text-emerald-200 font-light mb-8">We offer custom solutions for unique properties.</p>
+            <h4 className="text-2xl md:text-3xl font-display font-bold mb-3 md:mb-4 text-white">Need something else?</h4>
+            <p className="text-sm md:text-base text-emerald-200 font-light mb-6 md:mb-8">We offer custom solutions for unique properties.</p>
             <Link
               to="/contact"
-              className="bg-white text-emerald-900 px-8 py-4 rounded-full font-semibold hover:bg-stone-100 transition-colors"
+              className="bg-white text-emerald-900 px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold hover:bg-stone-100 transition-colors text-sm md:text-base"
             >
               Contact Us
             </Link>

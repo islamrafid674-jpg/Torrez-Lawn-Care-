@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 export default function About() {
   return (
-    <section className="py-32 bg-stone-50 overflow-hidden">
+    <section className="py-16 md:py-32 bg-stone-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
           
           {/* Image Side */}
           <motion.div 
@@ -25,9 +25,9 @@ export default function About() {
             </div>
             
             {/* Floating Premium Badge */}
-            <div className="absolute -bottom-6 right-4 md:-bottom-10 md:-right-10 glass p-6 md:p-8 rounded-[2rem] max-w-[260px] md:max-w-xs shadow-2xl">
-              <div className="text-4xl md:text-5xl font-display font-bold text-emerald-600 mb-2">100%</div>
-              <div className="text-sm md:text-base text-stone-800 font-medium leading-snug">Satisfaction Guaranteed on every single project.</div>
+            <div className="absolute -bottom-6 right-4 md:-bottom-10 md:-right-10 glass p-5 md:p-8 rounded-[1.5rem] md:rounded-[2rem] max-w-[240px] md:max-w-xs shadow-2xl">
+              <div className="text-3xl md:text-5xl font-display font-bold text-emerald-600 mb-1 md:mb-2">100%</div>
+              <div className="text-xs md:text-base text-stone-800 font-medium leading-snug">Satisfaction Guaranteed on every single project.</div>
             </div>
           </motion.div>
 
@@ -39,12 +39,12 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="lg:pl-12 mt-12 lg:mt-0"
           >
-            <h2 className="text-emerald-600 font-semibold tracking-widest uppercase text-sm mb-4">Who We Are</h2>
-            <h3 className="text-4xl md:text-6xl font-display font-bold text-stone-900 mb-8 leading-[1.1]">
+            <h2 className="text-emerald-600 font-semibold tracking-widest uppercase text-xs md:text-sm mb-3 md:mb-4">Who We Are</h2>
+            <h3 className="text-3xl sm:text-4xl md:text-6xl font-display font-bold text-stone-900 mb-6 md:mb-8 leading-[1.1]">
               More than just a lawn care provider.
             </h3>
             
-            <div className="space-y-6 text-lg text-stone-600 font-light leading-relaxed mb-10">
+            <div className="space-y-4 md:space-y-6 text-base md:text-lg text-stone-600 font-light leading-relaxed mb-8 md:mb-10">
               <p>
                 Torrez Lawn Care Services is a locally owned and operated company proudly serving Hammond, Louisiana and surrounding areas. We’re your neighbors who care deeply about the beauty and value of your property.
               </p>
@@ -53,16 +53,16 @@ export default function About() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
               <Link
                 to="/services"
-                className="bg-stone-900 hover:bg-stone-800 text-white px-8 py-4 rounded-full font-medium transition-colors text-center"
+                className="bg-stone-900 hover:bg-stone-800 text-white px-8 py-4 rounded-full font-medium transition-colors text-center text-sm md:text-base"
               >
                 View Our Services
               </Link>
               <Link
                 to="/contact"
-                className="bg-emerald-100/50 text-emerald-800 hover:bg-emerald-100 px-8 py-4 rounded-full font-medium transition-colors text-center"
+                className="bg-emerald-100/50 text-emerald-800 hover:bg-emerald-100 px-8 py-4 rounded-full font-medium transition-colors text-center text-sm md:text-base"
               >
                 Request an Estimate
               </Link>

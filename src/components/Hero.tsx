@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Leaf } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Hero() {
@@ -14,6 +14,32 @@ export default function Hero() {
           className="w-full h-full object-cover opacity-60 scale-105 animate-[pulse_20s_ease-in-out_infinite_alternate]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-stone-950/40 via-stone-900/60 to-stone-950" />
+      </div>
+
+      {/* Floating Elements */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        {[...Array(5)].map((_, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 100, x: Math.random() * 100 - 50, rotate: 0 }}
+            animate={{ 
+              opacity: [0, 0.5, 0], 
+              y: -1000, 
+              x: Math.random() * 200 - 100,
+              rotate: 360 
+            }}
+            transition={{ 
+              duration: 15 + Math.random() * 10, 
+              repeat: Infinity, 
+              delay: Math.random() * 5,
+              ease: "linear"
+            }}
+            className="absolute bottom-0 text-emerald-500/20"
+            style={{ left: `${Math.random() * 100}%` }}
+          >
+            <Leaf className="w-12 h-12 md:w-24 md:h-24" />
+          </motion.div>
+        ))}
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
